@@ -18,7 +18,7 @@ public class ShapeController {
         initData();
     }
 
-    // Підготовлений набір даних (10 фігур)
+
     private void initData() {
         shapes = new Shape[] {
                 new Rectangle("Червоний", 4.0, 5.0),
@@ -35,25 +35,25 @@ public class ShapeController {
     }
 
     public void execute() {
-        // 1. Відображення початкового набору даних
+
         view.printShapes(shapes, "Початковий набір фігур");
 
-        // 2. Сумарна площа всіх фігур
+
         double totalArea = calculateTotalArea();
         view.printTotalArea("\nСумарна площа всіх фігур", totalArea);
 
-        // 3. Сумарна площа фігур заданого виду (наприклад, Circle і Rectangle)
+
         double circlesArea = calculateAreaByType(Circle.class);
         view.printTotalArea("Сумарна площа всіх кіл (Circle)", circlesArea);
 
         double rectanglesArea = calculateAreaByType(Rectangle.class);
         view.printTotalArea("Сумарна площа всіх прямокутників (Rectangle)", rectanglesArea);
 
-        // 4. Сортування за площею (Comparator)
+
         Arrays.sort(shapes, Comparator.comparingDouble(Shape::calcArea));
         view.printShapes(shapes, "Фігури, відсортовані за збільшенням площі");
 
-        // 5. Сортування за кольором (Comparator)
+
         Arrays.sort(shapes, Comparator.comparing(Shape::getShapeColor));
         view.printShapes(shapes, "Фігури, відсортовані за кольором");
     }
