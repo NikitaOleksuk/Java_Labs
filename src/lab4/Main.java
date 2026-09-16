@@ -17,7 +17,7 @@ public class Main {
         PoliceCar policeCar = new PoliceCar(2);
         PoliceOfficer cop = new PoliceOfficer("Андрій");
         policeCar.boardPassenger(cop);
-        // policeCar.boardPassenger(passenger); // Помилка компіляції! Приймає тільки PoliceOfficer
+
         System.out.printf("Поліцейська машина: зайнято %d з %d місць%n", policeCar.getOccupiedSeats(), policeCar.getMaxSeats());
 
         FireTruck fireTruck = new FireTruck(4);
