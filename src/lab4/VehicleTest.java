@@ -50,7 +50,7 @@ class VehicleTest {
         road.addCarToRoad(bus);
         road.addCarToRoad(fireTruck);
 
-        // 2 людини в автобусі + 1 у пожежній машині = 3
+
         assertEquals(3, road.getCountOfHumans());
     }
 }
