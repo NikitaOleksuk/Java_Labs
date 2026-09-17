@@ -4,7 +4,7 @@ import java.io.FilterReader;
 import java.io.IOException;
 import java.io.Reader;
 
-// Потік фільтрації для дешифрування під час читання
+
 class CaesarFilterReader extends FilterReader {
     private final char keyChar;
 

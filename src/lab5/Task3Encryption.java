@@ -27,16 +27,16 @@ public class Task3Encryption {
         char key = 'K';
 
         try {
-            // а. Шифрування
+
             encrypt(originalText, file, key);
             System.out.println("Текст успішно зашифровано у файл: " + file);
 
-            // Читання зашифрованого сирого файлу для демонстрації
+
             try (BufferedReader rawReader = new BufferedReader(new FileReader(file))) {
                 System.out.println("Зашифрований вміст файлу: " + rawReader.readLine());
             }
 
-            // b. Дешифрування
+
             String decryptedText = decrypt(file, key);
             System.out.println("Дешифрований текст: " + decryptedText);
             System.out.println("Збіг з оригіналом: " + originalText.equals(decryptedText));
